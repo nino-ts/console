@@ -1,9 +1,6 @@
 {
     "author": "Ninots Framework",
-    "bin": {
-        "ninots": "./bin/ninots.ts"
-    },
-    "description": "CLI Framework for Bun",
+    "description": "CLI Framework for Bun (Command/Kernel primitives; artisan binary is @ninots/cli — S15)",
     "devDependencies": {
         "@types/bun": "^1.3.13"
     },
@@ -17,8 +14,6 @@
     "files": [
         "LICENSE",
         "README.md",
-        "bin",
-        "bin/ninots.ts",
         "dist",
         "dist/index.d.ts",
         "index.ts",
