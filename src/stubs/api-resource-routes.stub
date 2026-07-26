@@ -1,0 +1,4 @@
+        router.get("/{{ routePrefix }}", () => {{ variableName }}.index()).name("{{ routePrefix }}.index");
+        router.get("/{{ routePrefix }}/:id", (request, params) => {{ variableName }}.show(request, params)).name("{{ routePrefix }}.show");
+        router.put("/{{ routePrefix }}/:id", (request, params) => {{ variableName }}.update(request, params)).name("{{ routePrefix }}.update");
+        router.delete("/{{ routePrefix }}/:id", (request, params) => {{ variableName }}.destroy(request, params)).name("{{ routePrefix }}.destroy");

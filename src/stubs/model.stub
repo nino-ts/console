@@ -1,0 +1,9 @@
+import { Model, Table } from "@ninots/orm";
+
+/**
+ * {{ className }} model.
+ */
+@Table("{{ tableName }}")
+export class {{ className }} extends Model {
+    protected static override fillable: string[] = [];
+}

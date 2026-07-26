@@ -1,0 +1,37 @@
+import type { RouteParams } from "@ninots/routing";
+import { render } from "@ninots/view";
+import { Controller } from "@/app/Http/Controllers/Controller";
+import { {{ viewExportName }} } from "{{ viewImportPath }}";
+
+/**
+ * {{ className }} resource controller (web + CSRF group).
+ */
+export class {{ className }} extends Controller {
+    public async index(): Promise<Response> {
+        return render({{ viewExportName }}, {});
+    }
+
+    public async create(): Promise<Response> {
+        return render({{ viewExportName }}, { title: "Create" });
+    }
+
+    public async store(_request: Request): Promise<Response> {
+        return this.redirect("/{{ routePrefix }}");
+    }
+
+    public async show(_request: Request, params?: RouteParams): Promise<Response> {
+        return render({{ viewExportName }}, { id: params?.id });
+    }
+
+    public async edit(_request: Request, params?: RouteParams): Promise<Response> {
+        return render({{ viewExportName }}, { id: params?.id, title: "Edit" });
+    }
+
+    public async update(_request: Request, params?: RouteParams): Promise<Response> {
+        return this.json({ id: params?.id, updated: true });
+    }
+
+    public async destroy(_request: Request, params?: RouteParams): Promise<Response> {
+        return this.noContent();
+    }
+}

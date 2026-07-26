@@ -1,0 +1,18 @@
+import type { Connection, Migration } from "@ninots/orm";
+
+/**
+ * {{ className }} migration.
+ */
+export default class {{ className }} implements Migration {
+    public async up(connection: Connection): Promise<void> {
+        await connection.run(`
+            CREATE TABLE IF NOT EXISTS {{ tableName }} (
+                id INTEGER PRIMARY KEY AUTOINCREMENT
+            )
+        `);
+    }
+
+    public async down(connection: Connection): Promise<void> {
+        await connection.run("DROP TABLE IF EXISTS {{ tableName }}");
+    }
+}

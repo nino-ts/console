@@ -1,0 +1,18 @@
+import { withLayout } from "@ninots/view";
+import { AppLayout } from "@/resources/views/layouts/app";
+
+export interface {{ exportName }}Props {
+    title?: string;
+    id?: string;
+}
+
+function {{ exportName }}Page({ title = "{{ exportName }}", id }: {{ exportName }}Props) {
+    return (
+        <section className="welcome">
+            <h1>{title}</h1>
+            {id ? <p>Resource ID: {id}</p> : null}
+        </section>
+    );
+}
+
+export const {{ exportName }} = withLayout(AppLayout, {{ exportName }}Page, { title: "{{ exportName }} — Ninots" });

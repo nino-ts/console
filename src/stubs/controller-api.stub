@@ -1,0 +1,24 @@
+import type { RouteParams } from "@ninots/routing";
+import { Controller } from "@/app/Http/Controllers/Controller";
+
+/**
+ * {{ className }} API resource controller (no POST routes).
+ */
+export class {{ className }} extends Controller {
+    public async index(): Promise<Response> {
+        return this.json([]);
+    }
+
+    public async show(_request: Request, params?: RouteParams): Promise<Response> {
+        return this.json({ id: params?.id });
+    }
+
+    public async update(request: Request, params?: RouteParams): Promise<Response> {
+        const data = (await request.json()) as Record<string, unknown>;
+        return this.json({ id: params?.id, ...data });
+    }
+
+    public async destroy(_request: Request, params?: RouteParams): Promise<Response> {
+        return this.noContent();
+    }
+}

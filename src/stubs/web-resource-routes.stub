@@ -1,0 +1,7 @@
+        router.get("/{{ routePrefix }}", () => {{ variableName }}.index()).name("{{ routePrefix }}.index");
+        router.get("/{{ routePrefix }}/create", () => {{ variableName }}.create()).name("{{ routePrefix }}.create");
+        router.post("/{{ routePrefix }}", (request) => {{ variableName }}.store(request)).name("{{ routePrefix }}.store");
+        router.get("/{{ routePrefix }}/:id", (request, params) => {{ variableName }}.show(request, params)).name("{{ routePrefix }}.show");
+        router.get("/{{ routePrefix }}/:id/edit", (request, params) => {{ variableName }}.edit(request, params)).name("{{ routePrefix }}.edit");
+        router.put("/{{ routePrefix }}/:id", (request, params) => {{ variableName }}.update(request, params)).name("{{ routePrefix }}.update");
+        router.delete("/{{ routePrefix }}/:id", (request, params) => {{ variableName }}.destroy(request, params)).name("{{ routePrefix }}.destroy");
