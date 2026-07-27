@@ -75,7 +75,7 @@ export function registerWebRoutes(router: Router): void {
             result.indexOf("export function registerWebRoutes"),
         );
         expect(result).toMatch(
-            /from "@ninots\/framework";\nimport \{ FooController \}/,
+            /from "@ninots\/routing";\nimport \{ FooController \}/,
         );
     });
 });
