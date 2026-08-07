@@ -1,10 +1,10 @@
-{
+﻿{
   "name": "@ninots/console",
   "main": "index.ts",
   "module": "index.ts",
   "type": "module",
   "version": "0.1.0",
-  "description": "CLI Framework for Bun (Command/Kernel primitives; artisan binary is @ninots/cli — S15)",
+  "description": "CLI Framework for Bun (Command/Kernel primitives; artisan binary is @ninots/cli â€” S15)",
   "author": "Ninots Framework",
   "keywords": [
     "bun",
@@ -50,7 +50,6 @@
     "dist",
     "dist/index.d.ts",
     "index.ts",
-    "jsr.json",
     "src"
   ],
   "engines": {
@@ -58,3 +57,4 @@
   },
   "packageManager": "~bun@1.0.0"
 }
+
